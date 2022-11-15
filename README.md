@@ -1,4 +1,4 @@
-# space game
+# Space Game
 ------------------------------------------------
 
 * 게임 링크 : https://aestura.github.io/Aestura2.io/
