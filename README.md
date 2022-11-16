@@ -3,7 +3,7 @@
 ![a](/screen.PNG)
 
 
-```
+```HTML
 function startGame() {
     //우주선 사진이랑 배경 사진, 점수
     myGamePiece = new component(30, 30, "spaceship.png", 115, 440, "image");
