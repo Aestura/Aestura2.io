@@ -2,7 +2,7 @@
 ------------------------------------------------
 ![a](/screen.PNG)
 
-
+* 사진과 점수,사운드
 ```html
 function startGame() {
     //우주선 사진이랑 배경 사진, 점수
@@ -20,8 +20,8 @@ function startGame() {
     myGameArea.start();
 }
 ```
-
-
+------------------------------------------------
+* 벽 추가
 ```html
 this.newPos = function() {
         this.x += this.speedX;
@@ -52,6 +52,26 @@ this.newPos = function() {
         }
     }
 ```
+----------------------------------------------------
+* 사운드 추가
+```html
+//사운드 추가
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }    
+}
+```
+
 
 
 
