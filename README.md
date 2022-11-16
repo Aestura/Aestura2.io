@@ -21,6 +21,40 @@ function startGame() {
 }
 ```
 
+
+```html
+this.newPos = function() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.hitBottom();
+        this.hitleft();
+        this.hitright();
+    }
+    //벽 안 넘어가게
+    this.hitBottom = function() {
+        var rockbottom = myGameArea.canvas.height - this.height;
+        if (this.y > rockbottom) {
+            this.y = rockbottom;
+        }
+    }
+
+    this.hitleft = function(){
+        var hitleft = myGameArea.canvas.width - myGameArea.canvas.width ;
+        if (this.x < 0) {
+            this.x = hitleft;
+        }
+    }
+
+    this.hitright = function(){
+        var hitright = myGameArea.canvas.width - this.width ;
+        if (this.x > hitright) {
+            this.x = hitright;
+        }
+    }
+```
+
+
+
 -------------------------------------------------
 * 게임 링크 : https://aestura.github.io/Aestura2.io/
 * 참고 : https://www.w3schools.com/graphics/game_intro.asp
