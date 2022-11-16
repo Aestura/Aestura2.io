@@ -71,8 +71,26 @@ function sound(src) {
     }    
 }
 ```
-
-
+--------------------------------------------------
+* 키보드 입력 추가
+//키보드 입력
+```html
+        window.addEventListener('keydown', function (e) {
+            myGameArea.keys = (myGameArea.keys || []);
+            myGameArea.keys[e.keyCode] = true;
+        })
+        window.addEventListener('keyup', function (e) {
+            myGameArea.keys[e.keyCode] = false;
+        })
+        },
+```
+```html
+ // 키보드 입력으로 속도 조절
+    if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.speedX = -1.5; }
+    if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.speedX = 1.5; }
+    if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speedY = -1.5; }
+    if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speedY = 1.5; }
+```
 
 
 -------------------------------------------------
